@@ -18,14 +18,14 @@
                 <iframe src="<%=contextPath%>${pdfUrl}" style="position: relative; width:100%; height:1100px; border:1px solid #00c;"></iframe>
             </div>
         </div>
-        <div class="row justify-content-end mb-4" style="position: fixed">
-            <div class="col-10"></div>
-            <div class="col">
-                <div class="btn-group">
-                    <a class="btn btn-light close">닫기</a>
-                </div>
-            </div>
-        </div>
+<%--        <div class="row justify-content-end mb-4" style="position: fixed">--%>
+<%--            <div class="col-10"></div>--%>
+<%--            <div class="col">--%>
+<%--                <div class="btn-group">--%>
+<%--                    <a class="btn btn-light close">닫기</a>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
 
     </stripes:layout-component>
 

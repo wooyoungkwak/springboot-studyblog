@@ -24,6 +24,27 @@
                 <!-- Blog entries-->
                 <div class="col-lg-8">
 
+<%--                    <table class="table table-hover">--%>
+<%--                        <thead class="text-center">--%>
+<%--                            <th>#</th>--%>
+<%--                            <th>과목</th>--%>
+<%--                            <th>학년</th>--%>
+<%--                            <th>개요</th>--%>
+<%--                            <th>등록일자</th>--%>
+<%--                        </thead>--%>
+<%--                        <tbody>--%>
+<%--                            <c:forEach begin="1" end="10" varStatus="status">--%>
+<%--                                <tr>--%>
+<%--                                    <td class="text-center">${status.index}</td>--%>
+<%--                                    <td class="text-center">수학</td>--%>
+<%--                                    <td class="text-center">중1</td>--%>
+<%--                                    <td class="text-lg-start">이 문제집은 테스트 문제집으로 확인을 위한 테스트 문제집 입니다.</td>--%>
+<%--                                    <td class="text-center">2022-01-01</td>--%>
+<%--                                </tr>--%>
+<%--                            </c:forEach>--%>
+<%--                        </tbody>--%>
+<%--                    </table>--%>
+
                     <!-- blog posts-->
                     <c:forEach var="blog" items="${blogs}" varStatus="status" >
                         <c:choose>
@@ -31,9 +52,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="card mb-4">
-                                            <a href="#!">
-                                                <img class="card-img-top" src="<%=contextPath%>${blog.thumbnailUrl}" alt="..."/>
-                                            </a>
+<%--                                        <img class="card-img-top" src="<%=contextPath%>${blog.thumbnailUrl}" alt="..."/>--%>
                                             <div class="card-body" index="${blog.blogSeq}">
                                                 <input type="hidden" class="thumbnailUrl" value="${blog.thumbnailUrl}"/>
                                                 <input type="hidden" class="pdfUrl" value="${blog.pdfUrl}"/>
@@ -51,8 +70,8 @@
                                                     </span>
                                                 </h2>
                                                 <p class="card-text">${blog.summary}</p>
-                                                <a class="btn btn-primary viewer">문제 보기 →</a>
-                                                <a class="btn btn-primary register">수정 하기 →</a>
+                                                <a class="btn btn-outline-primary viewer">문제 보기 →</a>
+                                                <a class="btn btn-outline-success register">답안지 작성 →</a>
                                             </div>
                                         </div>
                                     </div>
@@ -60,9 +79,7 @@
                             <c:otherwise>
                                     <div class="col-lg-6">
                                     <div class="card mb-4">
-                                        <a href="#!">
-                                            <img class="card-img-top" src="<%=contextPath%>${blog.thumbnailUrl}" alt="..."/>
-                                        </a>
+<%--                                        <img class="card-img-top" src="<%=contextPath%>${blog.thumbnailUrl}" alt="..."/>--%>
                                         <div class="card-body" index="${status.index}">
                                             <input type="hidden" class="thumbnailUrl" value="${blog.thumbnailUrl}"/>
                                             <input type="hidden" class="pdfUrl" value="${blog.pdfUrl}"/>
@@ -80,8 +97,8 @@
                                                 </span>
                                             </h2>
                                             <p class="card-text">${blog.summary}</p>
-                                            <a class="btn btn-primary viewer">문제 보기 →</a>
-                                            <a class="btn btn-primary register">수정 하기→</a>
+                                            <a class="btn btn-outline-primary viewer">문제 보기 →</a>
+                                            <a class="btn btn-outline-success register">답안지 작성 →</a>
                                         </div>
                                     </div>
                                 </div>
@@ -156,24 +173,21 @@
                                         </select>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
 
                     <!-- Registry widget -->
-                    <div class="card mb-4">
-                        <div class="card-header">학습지 등록</div>
-                        <div class="card-body">
-                            <div class="row">
-                                <a class="btn btn-primary register btn-lg text-center">등록</a>
-                            </div>
-                        </div>
-                    </div>
+<%--                    <div class="card mb-4">--%>
+<%--                        <div class="card-header">학습지 등록</div>--%>
+<%--                        <div class="card-body">--%>
+<%--                            <div class="row">--%>
+<%--                                <a class="btn btn-primary register btn-lg text-center">등록</a>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
 
                 </div>
-
             </div>
         </div>
 
@@ -294,9 +308,9 @@
                     let pageHtml = ``;
 
                     if (pageNumber == 1) {
-                        pageHtml += `<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>`;
+                        pageHtml += `<li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true"><</a></li>`;
                     } else {
-                        pageHtml += `<li class="page-item"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>`;
+                        pageHtml += `<li class="page-item"><a class="page-link" href="#" tabindex="-1" aria-disabled="true"><</a></li>`;
                     }
 
                     for (let i = 1; i <= totalPageNumber; i++) {
@@ -309,9 +323,9 @@
                     }
 
                     if (totalPageNumber > 3 && pageNumber < totalPageNumber) {
-                        pageHtml += `<li class="page-item"><a class="page-link" href="#!">Older</a></li>`;
+                        pageHtml += `<li class="page-item"><a class="page-link" href="#!">></a></li>`;
                     } else {
-                        pageHtml += `<li class="page-item disabled"><a class="page-link" href="#!">Older</a></li>`;
+                        pageHtml += `<li class="page-item disabled"><a class="page-link" href="#!">></a></li>`;
                     }
 
                     $('#pageControl').html(pageHtml);
