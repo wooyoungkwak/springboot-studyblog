@@ -1,5 +1,5 @@
 // web 및 java source 디렉토리 생성
-task initFile(dependsOn: ['createYML', 'createLog4j'], description: "initialize Web Project") {
+task initFile(dependsOn: ['createYML', 'createLog4j'], description: " create directory for web and java source !! & create property file ( appliction.yml & log4j2.xml) ") {
 
     doLast {
 
@@ -127,8 +127,8 @@ task createLog4j {
             [new File(absoluteDir, '../resources/log4j2.xml')].each {
                 if (!it.exists()) {
                     it.createNewFile()
-                    File configFile = file(it)
-                    configFile.write content
+                    File logFile = file(it)
+                    logFile.write(content, "utf-8")
                 }
             }
         }
@@ -253,8 +253,8 @@ task createYML {
             [new File(absoluteDir, '../resources/application.yml')].each {
                 if (!it.exists()) {
                     it.createNewFile()
-                    File configFile = file(it)
-                    configFile.write content
+                    File ymlFile = file(it)
+                    ymlFile.write(content, "utf-8")
                 }
 
             }
