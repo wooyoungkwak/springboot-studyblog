@@ -46,7 +46,7 @@
                 now: 0,
                 img: 2,
                 init: function () {
-                    $('img').eq(0).siblings().hide();
+                    $('.testSlide img').eq(0).siblings().hide();
                     setInterval(this.showSlide, 1000);
                 },
                 addEvent: function (){
@@ -54,12 +54,12 @@
                 },
                 showSlide: function () {
                     if (testSlide.now == testSlide.img) {
-                        $('img').eq(testSlide.now).fadeOut(1000);
-                        $('img').eq(0).fadeIn(1000);
+                        $('.testSlide img').eq(testSlide.now).fadeOut(1000);
+                        $('.testSlide img').eq(0).fadeIn(1000);
                         testSlide.now = 0;
                     } else {
-                        $('img').eq(testSlide.now).fadeOut(1000);
-                        $('img').eq(testSlide.now + 1).fadeIn(1000);
+                        $('.testSlide img').eq(testSlide.now).fadeOut(1000);
+                        $('.testSlide img').eq(testSlide.now + 1).fadeIn(1000);
                         testSlide.now++;
                     }
                 }
