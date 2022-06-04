@@ -14,6 +14,10 @@ ext.RDMBS = [
 ]
 
 ext.typeOfRDMBS = RDMBS.MSSQL                       // select to RDBMS
+ext.hostOfDEBUG = "localhost"                       // database host name for DEBUG Profile
+ext.hostOfRELASE = "localhost"                       // database host name for RELEASE Profile
+ext.databaseNameOfDBUG = "sarangbang"                // database name for DEBUG Profile
+ext.databaseNameOfRELASE = "sarangbang"              // database name for RELEASE Profile
 
 /* apply */
 apply from: 'initConfiguration.gradle'              // configuration for built environment
