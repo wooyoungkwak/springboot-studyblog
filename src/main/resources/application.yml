@@ -25,15 +25,20 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.SQLServer2012Dialect
   datasource:
-    url: jdbc:sqlserver://localhost;databaseName=_____;trustServerCertificate=true;encrypt=true;
-    username: 
-    password: 
+    url: jdbc:sqlserver://localhost;databaseName=sarangbang;trustServerCertificate=true;encrypt=true;
+    username: sa
+    password: rudnf12dnjf
 server:
   port: 8080
   servlet:
     context-path: /
     session:
       timeout: 300m
+file:
+  templateLocation: classpath:/templates/
+  staticLocation: classpath:/static/
+  resourceUri: /fileUpload/**
+  resourceLocation: D:/fileUpload/
 ---
 # release
 spring:
@@ -43,9 +48,9 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.SQLServer2012Dialect
   datasource:
-    url: jdbc:sqlserver://localhost;databaseName=_____;trustServerCertificate=true;encrypt=true;
-    username: 
-    password: 
+    url: jdbc:sqlserver://localhost;databaseName=sarangbang;trustServerCertificate=true;encrypt=true;
+    username: sa
+    password: rudnf12dnjf
 server:
   port: 80
   servlet:

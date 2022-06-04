@@ -14,7 +14,7 @@
     <stripes:layout-component name="contents">
 
         <!-- Page content-->
-        <div class="container px-4 px-lg-5">
+        <div class="container px-4 px-lg-5 introduce">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-7">
                     <div class="card">
@@ -30,12 +30,44 @@
                     </div>
                 </div>
             </div>
+
+            <div class="testSlide">
+                <img src="https://cdn.pixabay.com/photo/2020/05/14/15/46/puffins-5170171_960_720.jpg">
+                <img src="https://cdn.pixabay.com/photo/2020/05/11/19/01/swans-5159767_960_720.jpg">
+                <img src="https://cdn.pixabay.com/photo/2016/02/10/16/37/cat-1192026_960_720.jpg">
+            </div>
         </div>
 
     </stripes:layout-component>
 
     <stripes:layout-component name="javascript">
-        <script type="text/javascript" src="<%=contextPath%>/resources/js/proj-blog-scripts.js"></script>
+        <script type="text/javascript">
+            let testSlide = {
+                now: 0,
+                img: 2,
+                init: function () {
+                    $('img').eq(0).siblings().hide();
+                    setInterval(this.showSlide, 1000);
+                },
+                addEvent: function (){
+
+                },
+                showSlide: function () {
+                    if (testSlide.now == testSlide.img) {
+                        $('img').eq(testSlide.now).fadeOut(1000);
+                        $('img').eq(0).fadeIn(1000);
+                        testSlide.now = 0;
+                    } else {
+                        $('img').eq(testSlide.now).fadeOut(1000);
+                        $('img').eq(testSlide.now + 1).fadeIn(1000);
+                        testSlide.now++;
+                    }
+                }
+            }
+
+            testSlide.init();
+
+        </script>
     </stripes:layout-component>
 
 </stripes:layout-render>

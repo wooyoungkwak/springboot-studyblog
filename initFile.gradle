@@ -35,7 +35,7 @@ task initFile(dependsOn: ['createYML', 'createLog4j'], description: "initialize 
         sourceSets.main.java.srcDirs.each {
             String rootDir = it.toString().replace('[', '').replace(']', '')
             String packageDir = this.group.toString().replace('.', '\\')
-            String javaDir = rootDir + '\\' + packageDir + '\\' + this.name
+            String javaDir = rootDir + '\\' + packageDir + '\\' + this.name.toString().replace('-', '')
 
             [
                     new File(javaDir, '/aop'), new File(javaDir, '/controller'), new File(javaDir, '/encrypt'), new File(javaDir, '/exception'),
@@ -168,6 +168,11 @@ task createYML {
                 "logging:\n" +
                 "  config: classpath:log4j2.xml\n" +
                 "debug: false\n" +
+                "file:\n" +
+                "  templateLocation: classpath:/templates/\n" +
+                "  staticLocation: classpath:/static/\n" +
+                "  resourceUri: /fileUpload/**\n" +
+                "  resourceLocation: D:/fileUpload/\n" +
                 "---\n" +
                 "# debug\n" +
                 "spring:\n" +

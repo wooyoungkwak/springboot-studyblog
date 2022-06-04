@@ -1,3 +1,16 @@
 .over {
     cursor: pointer;
 }
+
+.introduce .testSlide{
+    width: auto;
+    height: 350px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.testSlide > img {
+    position: absolute;
+    transition: all 1s;
+}
