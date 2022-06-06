@@ -12,17 +12,17 @@
     <!DOCTYPE html>
     <html lang="en">
 
-        <%@ include file="/WEB-INF/views/reference/head.jsp" %>
+        <%@ include file="/WEB-INF/views/component/head.jsp" %>
 
         <body>
             <!-- Responsive navbar-->
-            <%@ include file="/WEB-INF/views/reference/nav.jsp" %>
+            <%@ include file="/WEB-INF/views/component/nav.jsp" %>
 
             <!-- content -->
             <stripes:layout-component name="contents"/>
 
             <!-- Footer -->
-            <%@ include file="/WEB-INF/views/reference/footer.jsp" %>
+            <%@ include file="/WEB-INF/views/component/footer.jsp" %>
 
             <!-- script -->
             <stripes:layout-component name="javascript"/>
