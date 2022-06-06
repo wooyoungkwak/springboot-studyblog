@@ -16,7 +16,7 @@
     <title>Blog ~</title>
 
     <link href="<%=contextPath%>/resources/css/styles.css" rel="stylesheet" />
-    <link href="<%=contextPath%>/resources/css/prog-blog-styles.css" rel="stylesheet" />
+    <link href="<%=contextPath%>/resources/css/proj-blog-styles.css" rel="stylesheet" />
     <script type="text/javascript" src="<%=contextPath%>/resources/js/lib/jquery/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="<%=contextPath%>/resources/js/lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="<%=contextPath%>/resources/js/base.js"></script>
