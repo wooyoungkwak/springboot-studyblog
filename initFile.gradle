@@ -193,8 +193,8 @@ task createYML {
 
                     content += ";databaseName="
 
-                    if (databaseNameOfDBUG != null && databaseNameOfDBUG != "") {
-                        content += databaseNameOfDBUG
+                    if (databaseNameOfDEBUG != null && databaseNameOfDEBUG != "") {
+                        content += databaseNameOfDEBUG
                     } else {
                         content += "_____"
                     }
@@ -215,8 +215,8 @@ task createYML {
 
                     content += "/"
 
-                    if (databaseNameOfDBUG != null && databaseNameOfDBUG != "") {
-                        content += databaseNameOfDBUG
+                    if (databaseNameOfDEBUG != null && databaseNameOfDEBUG != "") {
+                        content += databaseNameOfDEBUG
                     } else {
                         content += "_____"
                     }

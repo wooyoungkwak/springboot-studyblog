@@ -21,5 +21,4 @@
     <script type="text/javascript" src="<%=contextPath%>/resources/js/lib/bootstrap/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="<%=contextPath%>/resources/js/base.js"></script>
     <script type="text/javascript" src="<%=contextPath%>/resources/js/proj-blog-scripts.js"></script>
-
 </head>

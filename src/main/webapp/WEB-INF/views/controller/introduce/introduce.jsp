@@ -47,7 +47,7 @@
                 img: 2,
                 init: function () {
                     $('.testSlide img').eq(0).siblings().hide();
-                    setInterval(this.showSlide, 1000);
+                    setInterval(this.showSlide, 5000);
                 },
                 addEvent: function (){
 
@@ -67,6 +67,9 @@
 
             testSlide.init();
 
+            $('header').css({
+                "height": "895px"
+            });
         </script>
     </stripes:layout-component>
 
