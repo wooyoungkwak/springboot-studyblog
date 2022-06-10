@@ -15,8 +15,11 @@
         <%@ include file="/WEB-INF/views/component/head.jsp" %>
 
         <body>
+
             <!-- Responsive navbar-->
             <%@ include file="/WEB-INF/views/component/nav.jsp" %>
+
+            <div class="mb-4"></div>
 
             <!-- content -->
             <stripes:layout-component name="contents"/>

@@ -2,6 +2,8 @@ package com.young.springbootstudyblog.model.dto.home.service;
 
 import com.young.springbootstudyblog.model.dto.home.domain.Blog;
 import com.young.springbootstudyblog.model.dto.home.enums.Grade;
+import com.young.springbootstudyblog.model.dto.home.enums.ServiceType;
+import com.young.springbootstudyblog.model.dto.home.enums.Sort;
 import com.young.springbootstudyblog.model.dto.home.enums.Subject;
 
 import java.util.HashMap;
@@ -16,7 +18,7 @@ public interface BlogService {
 
     public Blog get(Integer blogSeq);
 
-    public HashMap<String, Object> getsAll(Integer page);
+    public HashMap<String, Object> getsAll(ServiceType serviceType, Sort sort, String searchContent, Integer page);
 
     public HashMap<String, Object> getsAllByGrade(Grade grade, Integer page);
 

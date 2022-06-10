@@ -51,6 +51,16 @@ dependencies {
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
 
+    // batch
+    if (dependenceOnBatch != null && dependenceOnBatch) {
+        implementation 'org.springframework.boot:spring-boot-starter-batch'
+    }
+
+    // quartz
+    if (dependenceOnQuartz != null && dependenceOnQuartz) {
+        implementation 'org.springframework.boot:spring-boot-starter-quartz'
+    }
+
     // security
     if (dependenceOnSecurity != null && dependenceOnSecurity) {
         logger.quiet 'apply as spring-boot-starter-security ... '

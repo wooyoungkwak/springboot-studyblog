@@ -10,7 +10,7 @@
 <%@ taglib prefix="script" uri="http://stripes.sourceforge.net/stripes-buffered-layout.tld" %>
 <% String contextPath = request.getContextPath(); %>
 
-<stripes:layout-render name="/WEB-INF/views/layout/register.jsp">
+<stripes:layout-render name="/WEB-INF/views/layout/default.jsp">
 
     <stripes:layout-component name="contents">
         <div class="row">

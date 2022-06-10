@@ -15,10 +15,11 @@
     <meta name="author" content="" />
     <title>Blog ~</title>
 
-    <link href="<%=contextPath%>/resources/css/styles.css" rel="stylesheet" />
-    <link href="<%=contextPath%>/resources/css/proj-blog-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
+    <link href="<%=contextPath%>/resources/css/base-styles.css" rel="stylesheet" />
+    <link href="<%=contextPath%>/resources/css/proj-styles.css" rel="stylesheet" />
     <script type="text/javascript" src="<%=contextPath%>/resources/js/lib/jquery/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="<%=contextPath%>/resources/js/lib/bootstrap/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="<%=contextPath%>/resources/js/base.js"></script>
-    <script type="text/javascript" src="<%=contextPath%>/resources/js/proj-blog-scripts.js"></script>
+    <script type="text/javascript" src="<%=contextPath%>/resources/js/base-scripts.js"></script>
+    <script type="text/javascript" src="<%=contextPath%>/resources/js/proj-scripts.js"></script>
 </head>

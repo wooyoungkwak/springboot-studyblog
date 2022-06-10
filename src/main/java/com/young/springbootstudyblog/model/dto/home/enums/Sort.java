@@ -1,30 +1,25 @@
 package com.young.springbootstudyblog.model.dto.home.enums;
 
+import lombok.Getter;
+
 /**
- * Date : 2022-05-19
+ * Date : 2022-06-06
  * Author : zilet
- * Project : studyblog
+ * Project : springboot-studyblog
  * Description :
  */
-public enum Subject {
+public enum Sort {
+    ASC("오름차순"),
 
-    NONE("과목 선택"),
-    MATH("수학"),
-
-    KOREAN("국어"),
-
-    ENGLISH("영어"),
-
-    SCIENCE("과학");
+    DESC("내림차순");
 
     private String value;
 
-    Subject(String value){
+    Sort(String value){
         this.value = value;
     }
 
     public String getValue(){
         return this.value;
     }
-
 }

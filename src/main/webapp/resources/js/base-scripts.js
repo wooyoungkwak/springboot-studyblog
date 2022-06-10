@@ -1,4 +1,4 @@
-let ajaxJT = function (url, data, succCallback, failCallBack) {
+$.ajaxJT = function (url, data, succCallback, failCallBack) {
 	if(typeof url === 'undefined') {
 		return;
 	}
@@ -18,7 +18,7 @@ let ajaxJT = function (url, data, succCallback, failCallBack) {
 	});
 };
 
-let ajaxJJ = function (url, data, succCallback, failCallBack) {
+$.ajaxJJ = function (url, data, succCallback, failCallBack) {
 	if(typeof url === 'undefined') {
 		return;
 	}
@@ -33,7 +33,7 @@ let ajaxJJ = function (url, data, succCallback, failCallBack) {
 			succCallback(result);
 		},
 		error: function (err) {
-			failCallBack();
+			failCallBack(err);
 		}
 	});
 };
@@ -82,9 +82,16 @@ $.ajaxASync = function(url, reqData, succCallback){
 
 };
 
+// get context path
+$.getContextPath = function () {
+	// let hostIndex = location.href.indexOf(location.host) + location.host.length;
+	// return location.href.substring(hostIndex, location.href.indexOf('/', hostIndex + 1));
+	let contextPath = "${pageContext.request.contextPath}";
+	return contextPath;
+};
+
 // 디버그 로그
-let log = console.log;
-
-window.addEventListener('DOMContentLoaded', function (){
-
-});
+let log = {
+	info: console.log,
+	error: console.error
+};

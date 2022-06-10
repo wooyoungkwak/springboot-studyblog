@@ -16,7 +16,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="text-center mt-4">
+                    <div class="text-center">
                         <img class="mb-4 img-error"
                              src="<%=contextPath%>/resources/assets/img/error-404-monochrome.svg"/>
                         <p class="lead">This requested URL was not found on this server.</p>

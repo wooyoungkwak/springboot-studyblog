@@ -1,0 +1,67 @@
+.over {
+    cursor: pointer;
+}
+
+.introduce .testSlide{
+    width: auto;
+    height: 350px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.testSlide > img {
+    position: absolute;
+    transition: all 2s;
+}
+
+.blogItem:hover {
+    transform: scale(1.2);
+    z-index: 100 !important;
+}
+
+.page-link:hover {
+    cursor: pointer;
+}
+
+#preThumbnail {
+    width: 100px;
+    height: 100px;
+}
+
+/*footer {*/
+/*    width: 100%;*/
+/*    position: absolute;*/
+/*    bottom: 0px;*/
+/*}*/
+
+header {
+    height: 900px;
+}
+
+.user-h {
+    height: 850px;
+}
+
+@keyframes slideIn {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+.tabMenu {
+    color: #fdfdfe;
+    background-color: #000000;
+}
+
+.tabMenu:hover {
+    background-color: #0d6efd;
+    cursor:pointer;
+}
+
+.tabActive {
+    background-color: #6c757d;
+}

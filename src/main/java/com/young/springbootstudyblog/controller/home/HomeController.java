@@ -35,26 +35,6 @@ public class HomeController extends ExtendsController {
 
 
 
-    @GetMapping("/register")
-    public String register(HttpServletRequest request, Model model,
-                           @RequestParam(defaultValue = "") String subSeq,
-                           @RequestParam(defaultValue = "") String subject,
-                           @RequestParam(defaultValue = "") String grade,
-                           @RequestParam(defaultValue = "") String contents,
-                           @RequestParam(defaultValue = "") String status,
-                           @RequestParam(defaultValue = "") String thumbnailUrl){
-
-        model.addAttribute("name", "학습지 Blog");
-        model.addAttribute("introduce", " 학습지 Blog 는 다양한 학습지를 중학교 1학년 ~ 3학년 / 고등학교 1학년 ~ 3학년 까지 준비가 되어 있습니다. \n 과목은 국어/영어/수학/과학 으로 이루어져 있습니다. ");
-
-        model.addAttribute("subSeq", subSeq);
-        model.addAttribute("subject", subject);
-        model.addAttribute("grade", grade);
-        model.addAttribute("contents", contents);
-        model.addAttribute("status", status);
-        model.addAttribute("thumbnailUrl", thumbnailUrl);
-        return getPath("/register");
-    }
 
     /* POST */
     @PostMapping(value = "/req/info")

@@ -35,7 +35,7 @@
     </stripes:layout-component>
 
     <stripes:layout-component name="javascript">
-        <script type="text/javascript" src="<%=contextPath%>/resources/js/proj-blog-scripts.js"></script>
+        <script type="text/javascript" src="<%=contextPath%>/resources/js/proj-scripts.js"></script>
     </stripes:layout-component>
 
 </stripes:layout-render>

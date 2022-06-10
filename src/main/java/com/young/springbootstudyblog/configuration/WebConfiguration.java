@@ -24,7 +24,6 @@ public class WebConfiguration implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         log.info("resource pass registered :: {} {} ", resourceUri, resourceLocation);
-
         registry.addResourceHandler(resourceUri).addResourceLocations("file:///" + resourceLocation);
     }
 }
